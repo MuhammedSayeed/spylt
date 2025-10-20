@@ -1,13 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base */
+  --dark-brown: #523122;
+  --milk: #FAEADE;
+
+  /* Pure Colors */
+  --middle-brown: #A26833;
+  --middle-orange: #7f3b2d;
+  --light-brown: #E3A458;
+  --bg-3rd: #FDEBD2;
+  --stork-3rd: #E8DDCA;
+  --stork: #222123;
+  --content-4th: #865720;
+  --border-4th: #C28C42;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Base */
+  --color-background: var(--milk);
+  --color-foreground: var(--dark-brown);
+
+  /* Custom Palette */
+  --color-dark-brown: var(--dark-brown);
+  --color-middel-orange: var(--middle-orange);
+  --color-milk: var(--milk);
+  --color-middle-brown: var(--middle-brown);
+  --color-light-brown: var(--light-brown);
+  --color-bg-3rd: var(--bg-3rd);
+  --color-stork-3rd: var(--stork-3rd);
+  --color-stork: var(--stork);
+  --color-content-4th: var(--content-4th);
+  --color-border-4th: var(--border-4th);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -20,7 +46,19 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--middle-orange);
+  color: var(--dark-brown);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer components {
+
+  .message {
+    @apply text-center uppercase text-[#faeade10] font-bold;
+  }
+
+  .paragraph-line {
+    @apply overflow-hidden;
+  }
 }
