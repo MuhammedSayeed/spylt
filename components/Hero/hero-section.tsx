@@ -20,19 +20,22 @@ const Hero = () => {
     tl.to("#hero-content", {
       opacity: 1,
       y: 0,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
+      force3D: true
     })
     tl.to("#reveal-text", {
       duration: 1,
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       ease: "circ.out",
-      delay: .4
+      delay: .4,
+      force3D: true
     }, "-=0.5")
     tl.from(titleSplit.chars, {
       opacity: 0,
       yPercent: 200,
       stagger: 0.02,
       ease: "power2.out",
+      force3D: true
     }, "-=.5")
 
     const heroTl = gsap.timeline({
@@ -48,7 +51,8 @@ const Hero = () => {
       rotate: 7,
       scale: 0.9,
       yPercent: 30,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
+      force3D: true
     })
 
   })

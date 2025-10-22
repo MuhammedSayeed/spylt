@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Antonio } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import SmoothGsapWrapper from "@/components/wrappers/smooth-gsap-wrapper";
+// import Splash from "@/components/splash/splash";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased ${antonio.className}`} >
+        {/* <Splash /> */}
+        <Navbar />
         <SmoothGsapWrapper>
-          <Navbar />
           {children}
         </SmoothGsapWrapper>
       </body>

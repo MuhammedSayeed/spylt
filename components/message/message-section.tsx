@@ -16,6 +16,7 @@ const MessageSection = () => {
             color: "#faeade",
             ease: "power1.in",
             stagger: 1,
+            force3D: true,
             scrollTrigger: {
                 trigger: ".message-content",
                 start: "top center",
@@ -30,6 +31,7 @@ const MessageSection = () => {
             color: "#faeade",
             ease: "power1.in",
             stagger: 1,
+            force3D: true,
             scrollTrigger: {
                 trigger: "#second-message",
                 start: "top center",
@@ -43,6 +45,7 @@ const MessageSection = () => {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             opacity: 1,
             ease: "power1.in",
+            force3D: true,
             scrollTrigger: {
                 trigger: ".message-content",
                 start: "top 60%",
@@ -60,6 +63,7 @@ const MessageSection = () => {
             ease: "power1.inOut",
             duration: .5,
             stagger: 0.1,
+            force3D: true,
             scrollTrigger: {
                 trigger: ".message-content",
                 start: "top center",

@@ -37,13 +37,15 @@ const Flavor = ({ flavor, index }: IProps) => {
             gsap.to(".drink-image", {
                 x: -mouseX * 40,
                 duration: 0.7,
-                ease: "power2.out"
+                ease: "power2.out",
+                force3D: true
             });
 
             gsap.to(".elements-image", {
                 x: -mouseX * 20, // Parallax effect
                 duration: 0.7,
-                ease: "power2.out"
+                ease: "power2.out",
+                force3D: true
             });
         };
 
@@ -52,7 +54,8 @@ const Flavor = ({ flavor, index }: IProps) => {
             gsap.to([".drink-image", ".elements-image"], {
                 x: 0,
                 duration: 0.7,
-                ease: "power2.out"
+                ease: "power2.out",
+                force3D: true
             });
         };
 

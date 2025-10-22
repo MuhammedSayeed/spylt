@@ -32,20 +32,24 @@ const FlavorTitle = () => {
                 opacity: 0,
                 ease: "power1.inOut",
                 duration: 2,
+                force3D: true,
+
             })
-                .to("#flavor-text-reveal", {
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                    opacity: 1,
-                    ease: "power1.inOut",
-                    duration: 2,
-                }, "<")
-                .from(secondTextSplit.chars, {
-                    yPercent: 200,
-                    stagger: 0.08,
-                    opacity: 0,
-                    ease: "power1.inOut",
-                    duration: 2,
-                });
+            tl.to("#flavor-text-reveal", {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                opacity: 1,
+                ease: "power1.inOut",
+                duration: 2,
+                force3D: true,
+            }, "<")
+            tl.from(secondTextSplit.chars, {
+                yPercent: 200,
+                stagger: 0.08,
+                opacity: 0,
+                ease: "power1.inOut",
+                duration: 2,
+                force3D: true,
+            });
         };
 
         // Add a media query for large screens (lg and up, e.g., 1024px)
